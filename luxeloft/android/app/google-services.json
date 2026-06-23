@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "140324011541",
+    "project_id": "luxeloft-58847",
+    "storage_bucket": "luxeloft-58847.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140324011541:android:d7e8651ae6784b82ee581c",
+        "android_client_info": {
+          "package_name": "com.example.luxeloft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140324011541-r2qg1jp65l3h0a1auch2g5rua7l74td9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.luxeloft",
+            "certificate_hash": "bcaed7be42982c4382c733700c959c412af8749a"
+          }
+        },
+        {
+          "client_id": "140324011541-re4r1pt9f3t7lj0eo0rdr88tet3ga310.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkLsLeMmAB_pk2GVirjRDiO9iWqSbG5wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "140324011541-re4r1pt9f3t7lj0eo0rdr88tet3ga310.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -31,7 +31,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
     setState(() => _isLoading = true);
     try {
-      // 1. Create account in Firebase Authentication (Email & Password ONLY)
       UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: _emailController.text.trim(),
         password: _passwordController.text.trim(),
@@ -39,7 +38,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
       User? user = userCredential.user;
       if (user != null) {
-        // 2. Save Name, Phone, and Email to Firestore Database
         await FirebaseFirestore.instance.collection('users').doc(user.uid).set({
           'uid': user.uid,
           'name': _nameController.text.trim(),
@@ -49,7 +47,6 @@ class _SignupScreenState extends State<SignupScreen> {
         });
 
         if (mounted) {
-          // 3. Show Success Snackbar
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content: Text('Account Created & Saved Successfully!'),
@@ -57,7 +54,6 @@ class _SignupScreenState extends State<SignupScreen> {
             ),
           );
           
-          // 4. Go to Home Screen
           Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(builder: (context) => const HomeScreen()),
@@ -115,7 +111,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
   Widget _inputField(IconData icon, String hint, {bool isPassword = false, TextEditingController? controller}) {
     return TextField(
-      controller: controller, // Connects text field to code
+      controller: controller, 
       obscureText: isPassword,
       decoration: InputDecoration(
         prefixIcon: Icon(icon, color: Colors.grey), suffixIcon: isPassword ? const Icon(Icons.visibility_off, color: Colors.grey) : null,
@@ -127,7 +123,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
   Widget _phoneField() {
     return TextField(
-      controller: _phoneController, // Connects phone field to code
+      controller: _phoneController, 
       keyboardType: TextInputType.phone,
       decoration: InputDecoration(
         prefixIcon: const Padding(padding: EdgeInsets.symmetric(horizontal: 15), child: Row(mainAxisSize: MainAxisSize.min, children: [Icon(Icons.flag, color: Colors.red), SizedBox(width: 5), Text("+244", style: TextStyle(color: Colors.grey)), Icon(Icons.keyboard_arrow_down, color: Colors.grey)])),

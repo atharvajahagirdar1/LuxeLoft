@@ -37,13 +37,11 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // --- NEW FIX: Fetching the name directly from Firestore ---
               FutureBuilder<DocumentSnapshot>(
                 future: FirebaseFirestore.instance.collection('users').doc(user?.uid).get(),
                 builder: (context, snapshot) {
                   String displayName = "Guest";
                   
-                  // 1. Try to get it from Auth Profile (Works for Google Sign-In)
                   if (user?.displayName != null && user!.displayName!.isNotEmpty) {
                     displayName = user.displayName!.split(" ")[0];
                   }

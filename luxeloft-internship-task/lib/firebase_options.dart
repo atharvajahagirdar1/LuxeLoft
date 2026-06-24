@@ -53,10 +53,10 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCkLsLeMmAB_pk2GVirjRDiO9iWqSbG5wk',
-    appId: '1:140324011541:android:d7e8651ae6784b82ee581c',
-    messagingSenderId: '140324011541',
-    projectId: 'luxeloft-58847',
-    storageBucket: 'luxeloft-58847.firebasestorage.app',
+    apiKey: 'API_KEY',
+    appId: 'APP_ID',
+    messagingSenderId: 'BLANK',
+    projectId: 'BLANK',
+    storageBucket: 'BLANK',
   );
 }

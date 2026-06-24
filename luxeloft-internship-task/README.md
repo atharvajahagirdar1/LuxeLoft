@@ -1,16 +1,18 @@
-# luxeloft
+# LuxeLoft - Flutter Internship Task
 
-A new Flutter project.
+This repository contains my submission for the Flutter Developer internship assignment. It is an e-commerce app prototype with a responsive UI and Firebase backend integration.
 
-## Getting Started
+[**📥 Download APK**](https://drive.google.com/file/d/1AJWCyTP4k0Rw75tJPAfQTx5guARS5dEf/view?usp=sharing) 
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+* **UI Screens:** Implemented the Splash, Onboarding, Login, OTP, Sign Up, and Home screens based on the provided Figma design.
+* **Firebase Auth:** Added user authentication supporting both Email/Password registration and Google Sign-In.
+* **Cloud Firestore:** * Automatically saves user profile data (Name, Email, Phone) during sign up.
+  * Fetches the logged-in user's name to display a personalized greeting on the Home screen.
+  * Retrieves live product data from the database to populate the Home dashboard.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack
+* Flutter / Dart
+* Firebase Authentication
+* Cloud Firestore
